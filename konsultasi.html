@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Konsultasi – Energyfy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" href="assets/img/logo-energyfy-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER SAMA SEPERTI INDEX -->
+  <header class="site-header-public">
+    <div class="brand-area">
+      <img src="assets/img/logo-energyfy-full.png" alt="Energyfy" class="brand-logo-full">
+    </div>
+    <nav class="nav-public">
+      <a href="index.html#beranda">Beranda</a>
+      <a href="index.html#materi">Materi</a>
+      <a href="index.html#peta">Peta Papua</a>
+      <a href="index.html#galeri">Galeri</a>
+      <a href="index.html#kontak">Contact</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+
+    <section class="section-block reveal reveal-visible" id="konsultasi">
+      <div class="section-heading-split">
+        <div>
+          <h2>Form konsultasi pemasangan EBT</h2>
+          <p class="section-intro">
+            Isi form di bawah ini. Hasil isian akan dikirim ke email admin sehingga dapat ditindaklanjuti.
+          </p>
+        </div>
+        <div class="section-mini-tag">
+          <span class="mini-chip">Konsultasi</span>
+        </div>
+      </div>
+
+      <!-- KARTU FORM: DIBUAT DI TENGAH DAN LEBARNYA NYAMAN -->
+      <div class="dashboard-card card-hover" style="max-width: 720px; margin: 0 auto;">
+        
+        <form
+  class="consult-form"
+  action="https://formsubmit.co/energyfysite@gmail.com"
+  method="POST"
+>
+  <input type="hidden" name="_subject" value="Form konsultasi baru dari website Energyfy">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+
+  <div class="form-group">
+    <label for="nama">Nama lengkap *</label>
+    <input
+      id="nama"
+      name="Nama"
+      type="text"
+      placeholder="Contoh: Rafael Wiliam"
+      required
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email *</label>
+    <input
+      id="email"
+      name="Email"
+      type="email"
+      placeholder="Contoh: nama@contoh.com"
+      required
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="wa">Nomor WhatsApp *</label>
+    <input
+      id="wa"
+      name="WhatsApp"
+      type="tel"
+      placeholder="Contoh: 0857 5696 3137"
+      required
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="lokasi">Lokasi (kabupaten/kota) *</label>
+    <input
+      id="lokasi"
+      name="Lokasi"
+      type="text"
+      placeholder="Contoh: Jayapura, Papua"
+      required
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="kebutuhan">Kebutuhan dan rencana sistem *</label>
+    <textarea
+      id="kebutuhan"
+      name="Kebutuhan"
+      rows="4"
+      placeholder="Contoh: PLTS atap 3 kWp untuk rumah, backup listrik saat malam, dan lain lain."
+      required
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn-primary consult-submit-btn">
+    Kirim form konsultasi
+  </button>
+
+  <p class="form-note-small">
+    Bidang bertanda * wajib diisi. Data akan dikirim ke email admin Energyfy
+    (<strong>energyfysite@gmail.com</strong>).
+  </p>
+</form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© Energyfy 2025</p>
+  </footer>
+
+</body>
+</html>

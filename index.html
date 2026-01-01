@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Energyfy - Peta dan Edukasi Energi Terbarukan Papua</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" href="assets/img/logo-energyfy-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""
+  >
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header-public">
+    <div class="brand-area">
+      <img src="assets/img/logo-energyfy-full.png" alt="Energyfy" class="brand-logo-full">
+    </div>
+    <nav class="nav-public">
+      <a href="#beranda">Beranda</a>
+      <a href="#materi">Materi</a>
+      <a href="#peta">Peta Papua</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#kontak">Contact</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+
+    <!-- BERANDA / HERO -->
+    <section id="beranda" class="hero-section reveal reveal-delay-1">
+      <div class="hero-bg-orb hero-bg-orb-left"></div>
+      <div class="hero-bg-orb hero-bg-orb-right"></div>
+
+      <div class="hero-centered-main">
+        <img
+          src="assets/img/logo-energyfy-icon.png"
+          alt="Logo Energyfy"
+          class="hero-main-logo floating"
+        >
+        <h1 class="hero-centered-title">
+          Energyfy
+        </h1>
+        <p class="hero-centered-subtitle">
+          Peta, edukasi, dan konsultasi energi terbarukan di Papua
+        </p>
+
+        <div class="hero-actions">
+          <a href="#peta" class="btn-primary">Lihat peta interaktif</a>
+          <a href="#materi" class="btn-outline">Baca materi singkat</a>
+        </div>
+
+        <div class="hero-tags">
+          <span class="hero-pill">Energi Baru Terbarukan</span>
+          <span class="hero-pill">Energi surya</span>
+          <span class="hero-pill">Energi angin</span>
+          <span class="hero-pill">Fokus Papua</span>
+        </div>
+      </div>
+
+      <div class="hero-card card-hover reveal reveal-delay-2">
+        <h2>Apa itu Energyfy?</h2>
+        <p>
+          Energyfy adalah pusat informasi EBT yang menyatukan edukasi, peta lokasi, dan ringkasan data.
+          Fokus awal pada energi surya dan angin agar pengembangan terarah dan mudah dipakai.
+        </p>
+        <ul>
+          <li>Profil singkat energi surya dan angin: prinsip, manfaat, dan catatan implementasi</li>
+          <li>Peta interaktif Papua dengan titik lokasi dan filter surya atau angin</li>
+          <li>Ringkasan data sederhana: jumlah lokasi dan informasi dasar per titik</li>
+          <li>Siap ditingkatkan: penambahan dataset, batas wilayah, dan sumber data terverifikasi</li>
+        </ul>
+        <p class="hero-note">
+          Titik lokasi dan angka di peta diringkas dari beberapa kajian dan dapat diperbarui
+          ketika tersedia data resmi yang lebih lengkap.
+        </p>
+      </div>
+    </section>
+
+    <!-- LATAR BELAKANG, VISI, MISI -->
+    <section class="stats-section reveal reveal-delay-1">
+      <div class="stat-card card-hover">
+        <p class="stat-label">Latar belakang pendirian Energyfy</p>
+        <p class="stat-number">Ringkasan</p>
+        <p class="stat-note">
+          Energyfy dibayangkan sebagai jembatan informasi sederhana mengenai potensi energi
+          terbarukan di Papua, sehingga pengunjung umum dapat melihat peta, ilustrasi, dan
+          contoh rencana pemanfaatan tanpa harus membuka banyak sumber berbeda.
+        </p>
+      </div>
+
+      <div class="stat-card card-hover">
+        <p class="stat-label">Visi Energyfy</p>
+        <p class="stat-number">Peta yang mudah dipahami</p>
+        <p class="stat-note">
+          Menjadi laman referensi awal yang ringkas dan mudah diakses mengenai potensi
+          energi surya dan angin di Papua, yang dapat menginspirasi lahirnya studi dan proyek nyata.
+        </p>
+      </div>
+
+      <div class="stat-card card-hover">
+        <p class="stat-label">Misi Energyfy</p>
+        <p class="stat-number">Edukasi dan konsultasi</p>
+        <p class="stat-note">
+          Menyajikan peta interaktif, materi singkat, dan jalur konsultasi dasar yang dapat
+          dikembangkan menjadi layanan pendampingan teknis di masa mendatang.
+        </p>
+      </div>
+    </section>
+
+    <!-- MATERI SINGKAT -->
+    <section id="materi" class="section-block reveal">
+      <div class="section-heading-split">
+        <div>
+          <h2>Materi singkat energi terbarukan</h2>
+          <p class="section-intro">
+            Materi di bawah ini berupa ringkasan. Jika diklik, akan muncul penjelasan lebih
+            lengkap dalam bentuk popup sehingga halaman utama tetap ringan.
+          </p>
+        </div>
+        <div class="section-mini-tag">
+          <span class="mini-chip">Materi dasar</span>
+          <span class="mini-chip">Untuk umum</span>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card card-hover">
+          <div class="feature-icon"><span>☀</span></div>
+          <h3>Energi surya</h3>
+          <p class="material-snippet">
+            Energi surya memanfaatkan radiasi matahari yang ditangkap modul fotovoltaik dan
+            diubah menjadi energi listrik.
+          </p>
+          <button
+            type="button"
+            class="material-more-btn"
+            data-title="Energi surya"
+            data-target="material-surya-full"
+          >
+            Baca materi lengkap
+          </button>
+        </article>
+
+        <article class="feature-card card-hover">
+          <div class="feature-icon"><span>🌬</span></div>
+          <h3>Energi angin</h3>
+          <p class="material-snippet">
+            Energi angin berasal dari pergerakan udara yang memutar turbin dan menghasilkan
+            energi listrik melalui generator.
+          </p>
+          <button
+            type="button"
+            class="material-more-btn"
+            data-title="Energi angin"
+            data-target="material-angin-full"
+          >
+            Baca materi lengkap
+          </button>
+        </article>
+
+        <article class="feature-card card-hover">
+          <div class="feature-icon"><span>♻</span></div>
+          <h3>Energi terbarukan</h3>
+          <p class="material-snippet">
+            Ringkasan mengenai apa yang dimaksud energi terbarukan, contoh sumbernya, dan
+            mengapa penting bagi pasokan energi masa depan.
+          </p>
+          <button
+            type="button"
+            class="material-more-btn"
+            data-title="Energi terbarukan"
+            data-target="material-energi-full"
+          >
+            Baca materi lengkap
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- MATERI LENGKAP TERSEMBUNYI (UNTUK POPUP) -->
+    <section class="material-full-hidden" aria-hidden="true">
+      <!-- ENERGI SURYA -->
+      <article id="material-surya-full">
+        <p>
+          Energi surya berasal dari radiasi matahari yang mengenai permukaan bumi. Modul
+          fotovoltaik menyerap cahaya dan mengubahnya menjadi energi listrik searah. Energi
+          ini dapat dipakai untuk berbagai kebutuhan, mulai dari rumah tangga sampai fasilitas
+          pelayanan publik. Indonesia yang berada di sekitar garis khatulistiwa menerima
+          intensitas radiasi matahari yang relatif stabil sepanjang tahun sehingga potensi
+          pengembangan PLTS cukup besar.
+        </p>
+        <p>
+          Kajian nasional menunjukkan rata rata radiasi global harian di Indonesia sekitar
+          4,5 sampai 5 kilowatt jam per meter persegi per hari, sehingga banyak wilayah yang
+          layak untuk PLTS atap maupun sistem terapung, termasuk Papua dan Papua Selatan.
+        </p>
+
+        <!-- BLOK VIDEO ENERGI SURYA -->
+        <div class="material-video">
+          <h3>Video pembelajaran energi surya</h3>
+          <div class="material-video-inner">
+            <!-- Ganti src dengan file video kamu sendiri -->
+            <video controls src="assets/video/energi-surya.mp4">
+              Browser kamu tidak mendukung tag video. Kamu dapat menonton materi ini melalui pemutar video lain.
+            </video>
+          </div>
+          <p class="material-video-note">
+            Video ini dapat berisi penjelasan langkah demi langkah mengenai cara kerja PLTS,
+            komponen utama, serta contoh penerapan sederhana.
+          </p>
+        </div>
+      </article>
+
+      <!-- ENERGI ANGIN -->
+      <article id="material-angin-full">
+        <p>
+          Energi angin memanfaatkan pergerakan massa udara untuk memutar turbin angin.
+          Putaran turbin diteruskan ke generator sehingga menghasilkan energi listrik.
+          Daya listrik yang dihasilkan sangat dipengaruhi oleh kecepatan angin, luas
+          sapuan baling baling, dan karakteristik turbin. Karena itu, pemilihan lokasi
+          dengan pola angin yang cukup stabil menjadi hal yang penting.
+        </p>
+        <p>
+          Di kawasan timur Indonesia terdapat beberapa wilayah pesisir dan pulau kecil
+          dengan potensi angin yang menarik. Pengukuran jangka panjang diperlukan untuk
+          melihat variasi harian dan musiman. Kombinasi turbin angin dan panel surya
+          dapat membentuk sistem hybrid yang saling melengkapi sehingga pasokan energi
+          menjadi lebih stabil sepanjang hari dan di berbagai musim.
+        </p>
+
+        <!-- BLOK VIDEO ENERGI ANGIN -->
+        <div class="material-video">
+          <h3>Video pembelajaran energi angin</h3>
+          <div class="material-video-inner">
+            <!-- Ganti src dengan file video kamu sendiri -->
+            <video controls src="assets/video/energi-angin.mp4">
+              Browser kamu tidak mendukung tag video. Kamu dapat menonton materi ini melalui pemutar video lain.
+            </video>
+          </div>
+          <p class="material-video-note">
+            Kamu dapat mengisi video ini dengan penjelasan mengenai prinsip turbin angin,
+            bentuk kurva daya, dan contoh lokasi ideal di Papua.
+          </p>
+        </div>
+      </article>
+
+      <!-- ENERGI TERBARUKAN UMUM -->
+      <article id="material-energi-full">
+        <p>
+          Energi terbarukan adalah energi yang berasal dari proses alam yang berulang dan
+          tidak habis jika dimanfaatkan secara wajar. Contohnya energi surya, energi angin,
+          air, biomassa, dan panas bumi. Berbeda dengan bahan bakar fosil yang jumlahnya
+          terbatas, sumber energi terbarukan terus diperbarui oleh proses alam.
+        </p>
+        <p>
+          Pengembangan energi terbarukan penting karena dapat mengurangi ketergantungan pada
+          bahan bakar fosil, menurunkan emisi gas rumah kaca, dan meningkatkan ketahanan energi
+          di daerah yang jauh dari jaringan listrik utama. Di Papua, potensi surya dan angin
+          yang cukup baik dapat dimanfaatkan untuk sistem mandiri maupun sistem hybrid yang
+          mendukung kebutuhan listrik rumah tangga, fasilitas pendidikan, dan pelayanan kesehatan.
+        </p>
+
+        <!-- BLOK VIDEO ENERGI TERBARUKAN UMUM -->
+        <div class="material-video">
+          <h3>Video pengantar energi terbarukan</h3>
+          <div class="material-video-inner">
+            <!-- Ganti src dengan file video kamu sendiri -->
+            <video controls src="assets/video/energi-terbarukan-umum.mp4">
+              Browser kamu tidak mendukung tag video. Kamu dapat menonton materi ini melalui pemutar video lain.
+            </video>
+          </div>
+          <p class="material-video-note">
+            Isi dengan video pengantar yang menjelaskan perbedaan energi terbarukan dan fosil,
+            contoh sumber energi, serta alasan pentingnya transisi energi.
+          </p>
+        </div>
+      </article>
+    </section>
+
+
+    <!-- PETA PAPUA -->
+    <section id="peta" class="section-block map-section-full reveal">
+      <div class="section-heading-split">
+        <div>
+          <h2>Peta interaktif potensi energi surya dan angin di Papua</h2>
+          <p class="section-intro">
+            Peta berikut menampilkan wilayah Papua sebagai fokus utama. Titik oranye
+            menunjukkan lokasi contoh dengan potensi energi surya, sementara titik biru
+            menunjukkan lokasi contoh potensi energi angin.
+          </p>
+          <p class="section-intro">
+            Pengunjung dapat memperbesar, menggeser, dan mengklik titik untuk melihat
+            ringkasan informasi lokasi berdasarkan kajian potensi energi terbarukan
+            dan data iklim yang sudah dipublikasikan. Baris sumber data di dalam pop up
+            dapat diklik untuk membuka jurnal atau laporan aslinya.
+          </p>
+        </div>
+        <div class="section-mini-tag">
+          <span class="mini-chip mini-chip-soft">Mode interaktif</span>
+        </div>
+      </div>
+
+      <div class="map-huge-wrapper card-hover">
+        <div id="map-papua" class="map-container map-container-huge"></div>
+      </div>
+    </section>
+
+    <!-- TABEL RINGKASAN LOKASI -->
+    <section class="section-block reveal">
+      <h3>Ringkasan lokasi kajian di Papua</h3>
+      <p class="section-intro">
+        Tabel ini merangkum beberapa kabupaten atau kota yang sering muncul dalam kajian
+        potensi energi surya dan angin di Papua. Nilai ditulis sebagai kisaran untuk
+        memudahkan pembaca yang belum terbiasa dengan satuan teknis.
+      </p>
+
+      <div class="table-wrapper card-hover">
+        <table class="simple-table">
+          <thead>
+            <tr>
+              <th>Wilayah</th>
+              <th>Jenis potensi utama</th>
+              <th>Keterangan singkat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Skouw, Kota Jayapura</td>
+              <td>Surya</td>
+              <td>
+                Pos perbatasan di utara Jayapura. Data radiasi global harian sekitar
+                4,8 sampai 5 kilowatt jam per meter persegi per hari, cocok untuk PLTS atap
+                dan penerangan kawasan.
+              </td>
+            </tr>
+            <tr>
+              <td>Merauke (Rawa Biru dan sekitarnya)</td>
+              <td>Surya</td>
+              <td>
+                Wilayah paling timur Indonesia dengan potensi radiasi surya harian sekitar
+                4,6 kilowatt jam per meter persegi per hari berdasarkan kajian PLTS terapung,
+                berpeluang untuk sistem PLTS skala kecil sampai menengah.
+              </td>
+            </tr>
+            <tr>
+              <td>Kaimana</td>
+              <td>Angin</td>
+              <td>
+                Kabupaten pesisir di Papua Barat Daya dengan kecepatan angin rata rata
+                mendekati 4,6 sampai 4,7 meter per detik, sesuai untuk turbin angin skala
+                kecil dan menengah.
+              </td>
+            </tr>
+            <tr>
+              <td>Biak Numfor</td>
+              <td>Angin dan surya</td>
+              <td>
+                Pulau pesisir dengan kecepatan angin harian sekitar 3,2 knot atau sekitar
+                1,6 meter per detik dan paparan surya yang baik, sehingga berpotensi untuk
+                sistem hybrid surya angin.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- DATA RINGKAS DI BAWAH TABEL -->
+    <section class="section-block summary-section reveal">
+      <h2>Data ringkas</h2>
+      <p class="section-intro">
+        Bagian ini menampilkan ringkasan sederhana dari jumlah titik potensi surya dan angin
+        yang digunakan pada peta saat ini. Angka dapat bertambah seiring penambahan titik baru.
+      </p>
+
+      <div class="summary-grid">
+        <article class="summary-card card-hover">
+          <p class="summary-label">Lokasi surya</p>
+          <p class="summary-number" id="summary-surya">0</p>
+          <p class="summary-note">Jumlah titik surya pada peta.</p>
+        </article>
+
+        <article class="summary-card card-hover">
+          <p class="summary-label">Lokasi angin</p>
+          <p class="summary-number" id="summary-angin">0</p>
+          <p class="summary-note">Jumlah titik angin pada peta.</p>
+        </article>
+
+        <article class="summary-card card-hover">
+          <p class="summary-label">Total lokasi</p>
+          <p class="summary-number" id="summary-total">0</p>
+          <p class="summary-note">Total seluruh titik potensi pada peta.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GALERI -->
+    <section id="galeri" class="section-block gallery-section reveal">
+      <div class="section-heading-split">
+        <div>
+          <h2>Ilustrasi sistem energi terbarukan</h2>
+          <p class="section-intro">
+            Galeri ini masih berupa ilustrasi. Di tahap selanjutnya dapat diganti dengan foto
+            proyek nyata, skema sistem, atau dokumentasi lapangan.
+          </p>
+        </div>
+        <div class="section-mini-tag">
+          <span class="mini-chip">Visualisasi</span>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="gallery-card card-hover">
+          <div class="gallery-image">
+            <img
+              src="assets/img/panel-surya.png"
+              alt="Panel surya di atap bangunan"
+              class="gallery-img"
+            >
+          </div>
+          <h3>PLTS atap untuk rumah dan fasilitas publik</h3>
+          <p>
+            Dapat membantu menurunkan pemakaian listrik jaringan dan meningkatkan keandalan
+            pasokan di lokasi yang penting.
+          </p>
+        </article>
+
+        <article class="gallery-card card-hover">
+          <div class="gallery-image">
+            <img
+              src="assets/img/turbin-angin.png"
+              alt="Turbin angin skala kecil"
+              class="gallery-img"
+            >
+          </div>
+          <h3>Turbin angin di wilayah terbuka</h3>
+          <p>
+            Cocok untuk pesisir atau dataran terbuka dengan kecepatan angin yang cukup stabil
+            sepanjang tahun.
+          </p>
+        </article>
+
+        <article class="gallery-card card-hover">
+          <div class="gallery-image">
+            <img
+              src="assets/img/hybrid-surya-angin.png"
+              alt="Sistem hybrid surya dan angin"
+              class="gallery-img"
+            >
+          </div>
+          <h3>Kombinasi energi surya dan energi angin</h3>
+          <p>
+            Sistem hybrid menggabungkan keunggulan masing masing sumber sehingga pasokan energi
+            lebih stabil sepanjang hari dan musim.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SUMBER DATA DAN REFERENSI -->
+    <section id="sumber-data" class="section-block reveal">
+      <div class="section-heading-split">
+        <div>
+          <h2>Sumber data dan referensi</h2>
+          <p class="section-intro">
+            Data pada peta, tabel ringkasan, dan teks deskriptif dirangkum dari beberapa jurnal
+            dan dokumen pemerintah berikut. Tautan dapat diklik untuk membuka sumber aslinya.
+          </p>
+        </div>
+      </div>
+
+      <div class="table-wrapper card-hover">
+        <ul class="reference-list">
+          <li>
+            <strong>Radiasi surya rata rata Indonesia dan Papua</strong><br>
+            <a href="https://gatrik.esdm.go.id/assets/uploads/download_index/files/c4d42-technology-data-for-the-indonesian-power-sector-2024-annoteret-af-kb-.pdf"
+               target="_blank" rel="noopener">
+              Directorate General of Electricity, Technology Data for the Indonesian Power Sector,
+              bab Solar PV.
+            </a>
+          </li>
+          <li>
+            <strong>Potensi PLTS terapung di Merauke (Rawa Biru)</strong><br>
+            <a href="https://ojs.uho.ac.id/index.php/jemt/article/view/22891"
+               target="_blank" rel="noopener">
+              Karim J dkk. Floating photovoltaic potential in the Rawa Biru Area of Merauke.
+            </a>
+          </li>
+          <li>
+            <strong>Potensi energi surya dan angin Kabupaten Kaimana</strong><br>
+            <a href="https://repository.unhas.ac.id/id/eprint/5331/"
+               target="_blank" rel="noopener">
+              Analisa Potensi Energi Terbarukan di Kabupaten Kaimana.
+            </a>
+          </li>
+          <li>
+            <strong>Data iklim dan kecepatan angin Kabupaten Biak Numfor</strong><br>
+            <a href="https://papua.go.id/potensi-daerah/iklim-dan-topografi-kabupaten-biak-numfor"
+               target="_blank" rel="noopener">
+              Pemerintah Provinsi Papua, Iklim dan Topografi Kabupaten Biak Numfor.
+            </a>
+          </li>
+          <li>
+            <strong>Peta radiasi surya global</strong><br>
+            <a href="https://globalsolaratlas.info/"
+               target="_blank" rel="noopener">
+              Global Solar Atlas, World Bank Group.
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT DI PALING BAWAH -->
+    <section id="kontak" class="section-block reveal">
+      <div class="section-heading-split">
+        <div>
+          <h2>Contact me dan konsultasi pemasangan EBT</h2>
+          <p class="section-intro">
+            Bagian ini menjadi penutup halaman. Pengunjung dapat melihat informasi kontak admin
+            dan menekan tombol di bawah untuk menuju halaman khusus form konsultasi.
+          </p>
+        </div>
+        <div class="section-mini-tag">
+          <span class="mini-chip">Konsultasi</span>
+        </div>
+      </div>
+
+            <div class="contact-layout contact-layout-stack">
+
+        <!-- Kartu utama berisi ajakan konsultasi + hal yang perlu disiapkan -->
+        <section class="dashboard-card card-hover">
+          <h3>Ingin mengajukan konsultasi?</h3>
+          <p>
+            Jika tertarik mendiskusikan rencana pemasangan PLTS, turbin angin, atau sistem hybrid
+            di wilayah Papua, kamu dapat membuka form konsultasi pada halaman berikutnya.
+          </p>
+
+          <p class="section-intro" style="margin-top: 10px; margin-bottom: 4px;">
+            Hal yang sebaiknya disiapkan sebelum berkonsultasi
+          </p>
+          <ul class="contact-tips">
+            <li>Lokasi kabupaten atau kota yang menjadi target.</li>
+            <li>Perkiraan daya yang dibutuhkan dan beban utama.</li>
+            <li>Tujuan pemasangan, misalnya rumah, sekolah, atau fasilitas kesehatan.</li>
+          </ul>
+
+          <p class="form-note-small">
+            Form konsultasi berada di halaman terpisah agar proses pengisian lebih fokus dan mudah
+            digunakan di perangkat seluler.
+          </p>
+
+          <a href="konsultasi.html" class="btn-primary" style="margin-top: 6px;">
+            Buka form konsultasi
+          </a>
+        </section>
+
+        <!-- Kontak admin di bawah kartu utama dan posisi di tengah -->
+        <section class="contact-info-card card-hover contact-info-card-full">
+          <h3>Kontak admin Energyfy</h3>
+          <p>
+            Selain melalui form, pengunjung juga dapat menghubungi kontak berikut untuk diskusi
+            awal terkait kebutuhan energi terbarukan.
+          </p>
+
+          <ul class="contact-list-icon">
+  <li>
+    <span class="contact-icon">✉</span>
+    <span>
+      <strong>Email</strong><br>
+      <a href="mailto:energyfysite@gmail.com">energyfysite@gmail.com</a>
+    </span>
+  </li>
+  <li>
+    <span class="contact-icon contact-icon-whatsapp">💬</span>
+    <span>
+      <strong>WhatsApp</strong><br>
+      <a href="https://wa.me/6285756963137" target="_blank" rel="noopener">
+        0857 5696 3137
+      </a>
+    </span>
+  </li>
+  <li>
+    <span class="contact-icon contact-icon-time">⏰</span>
+    <span>
+      <strong>Jam respons</strong><br>
+      Senin sampai Jumat pukul 09.00 sampai 17.00 WIB
+    </span>
+  </li>
+</ul>
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© Energyfy 2025</p>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    crossorigin=""
+  ></script>
+
+  <!-- Script utama Energyfy -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
