@@ -190,7 +190,7 @@ body {
 
 @media (min-width: 768px) {
   .hero-main-logo {
-    height: 120px;    /* lebih besar di layar lebar */
+    height: 155px;    /* lebih besar di layar lebar */
     margin-bottom: 10px;
   }
 }
@@ -1093,4 +1093,5 @@ body {
 .site-footer p {
   margin: 0;          
 }
+
 
