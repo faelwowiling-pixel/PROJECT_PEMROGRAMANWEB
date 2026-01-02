@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         name: "Skouw, Kota Jayapura",
         coords: [-2.55, 140.78],
-        subtitle: "Lokasi contoh potensi energi surya berdasarkan kajian global dan nasional.",
+        subtitle: "Lokasi potensi energi surya berdasarkan kajian global dan nasional.",
         text:
           "Wilayah perbatasan di utara Jayapura. Data radiasi global harian dari atlas surya dan ringkasan Kementerian ESDM menunjukkan nilai sekitar 4,8 sampai 5 kilowatt jam per meter persegi per hari, sesuai untuk PLTS atap dan penerangan kawasan.",
         sourceUrl: "https://globalsolaratlas.info/map?c=-2.55,140.78,9",
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         name: "Kabupaten Kaimana",
         coords: [-3.66, 133.74],
-        subtitle: "Lokasi contoh potensi energi angin di Papua Barat Daya.",
+        subtitle: "Lokasi potensi energi angin di Papua Barat Daya.",
         text:
           "Analisa potensi energi terbarukan di Kabupaten Kaimana menunjukkan kecepatan angin rata rata sekitar 4,6 sampai 4,7 meter per detik. Kelas angin ini cocok untuk turbin angin skala kecil dan menengah di pesisir maupun bukit yang cukup terbuka.",
         sourceUrl: "https://repository.unhas.ac.id/id/eprint/5331/",
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         name: "Biak Numfor",
         coords: [-1.00, 136.08],
-        subtitle: "Lokasi contoh kombinasi energi surya dan angin.",
+        subtitle: "Lokasi kombinasi energi surya dan angin.",
         text:
           "Dokumen iklim Kabupaten Biak Numfor mencatat kecepatan angin rata rata sekitar 3,2 knot atau sekitar 1,6 meter per detik dengan paparan surya yang baik. Kondisi ini membuka peluang sistem hybrid surya angin untuk kebutuhan listrik pulau.",
         sourceUrl: "https://papua.go.id/potensi-daerah/iklim-dan-topografi-kabupaten-biak-numfor",
@@ -183,11 +183,11 @@ document.addEventListener("DOMContentLoaded", function () {
           <ul class="map-legend-list">
             <li class="map-legend-item">
               <span class="map-legend-dot solar"></span>
-              <span>Lokasi contoh potensi energi surya</span>
+              <span>Lokasi potensi energi surya</span>
             </li>
             <li class="map-legend-item">
               <span class="map-legend-dot wind"></span>
-              <span>Lokasi contoh potensi energi angin</span>
+              <span>Lokasi potensi energi angin</span>
             </li>
           </ul>
 
@@ -253,4 +253,5 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
+
 });
