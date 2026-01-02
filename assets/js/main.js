@@ -204,7 +204,6 @@ document.addEventListener("DOMContentLoaded", function () {
           <p class="map-legend-section-title" style="margin-top:8px;">Catatan peta</p>
           <p class="map-popup-source">
             Garis batas berasal dari layer dasar OpenStreetMap.
-            Simbol bersifat ilustratif dan dapat disesuaikan dengan data resmi bila tersedia.
           </p>
         </div>
       `;
