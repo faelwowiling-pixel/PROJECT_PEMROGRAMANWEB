@@ -254,3 +254,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const status = params.get("status");
+
+  if (status === "sukses") {
+    const notif = document.getElementById("notif-sukses");
+    if (notif) notif.style.display = "block";
+
+    params.delete("status");
+    const query = params.toString();
+    const newUrl = window.location.pathname + (query ? "?" + query : "") + window.location.hash;
+    window.history.replaceState({}, "", newUrl);
+  }
+})();
