@@ -269,3 +269,41 @@ document.addEventListener("DOMContentLoaded", function () {
     window.history.replaceState({}, "", newUrl);
   }
 })();
+
+(function () {
+  const form = document.getElementById("consultForm");
+  if (!form) return;
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const data = {};
+    new FormData(form).forEach((value, key) => {
+      data[key] = value;
+    });
+
+    try {
+      const res = await fetch(
+        "https://script.google.com/macros/s/AKfycbwJKGmUoSwXZwU6UCgY12vGr4O16U62MDZMHyVi37oBY3mMwHSmG_8NO2IPp0SR5ZAiLw/exec",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        }
+      );
+
+      const text = await res.text();
+      let out;
+      try { out = JSON.parse(text); } catch { out = null; }
+
+      if (out && out.ok) {
+        window.location.href = "https://energyfy.site/?status=sukses";
+        return;
+      }
+
+      alert("Pengiriman gagal. Silakan coba lagi.");
+    } catch (err) {
+      alert("Pengiriman gagal. Periksa koneksi.");
+    }
+  });
+})();
