@@ -1125,3 +1125,24 @@ body {
 .toast .toast-desc {
   opacity: 0.95;
 }
+
+.btn-loading {
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.btn-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.55);
+  border-top-color: rgba(255,255,255,1);
+  border-radius: 50%;
+  vertical-align: -2px;
+  margin-right: 8px;
+  animation: spin 800ms linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
