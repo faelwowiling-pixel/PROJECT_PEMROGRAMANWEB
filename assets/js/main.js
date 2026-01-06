@@ -307,24 +307,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 })();
-
-(function () {
-  const form = document.getElementById("consultForm");
-  const iframe = document.getElementById("hidden_iframe");
-  if (!form || !iframe) return;
-
-  let isSubmitting = false;
-
-  form.addEventListener("submit", function () {
-    isSubmitting = true;
-  });
-
-  iframe.addEventListener("load", function () {
-    if (!isSubmitting) return;
-    isSubmitting = false;
-
-    // kalau mau kembali ke halaman konsultasi:
-    window.location.href = "https://energyfy.site/konsultasi.html?status=sukses#konsultasi";
-
-  });
-})();
