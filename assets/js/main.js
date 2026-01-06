@@ -269,3 +269,100 @@ document.addEventListener("DOMContentLoaded", function () {
     window.history.replaceState({}, "", newUrl);
   }
 })();
+
+(function () {
+  function showToast(title, desc) {
+    let toast = document.getElementById("energyfy-toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "energyfy-toast";
+      toast.className = "toast";
+      toast.innerHTML = `
+        <div class="toast-title"></div>
+        <div class="toast-desc"></div>
+      `;
+      document.body.appendChild(toast);
+    }
+
+    toast.querySelector(".toast-title").textContent = title || "Berhasil";
+    toast.querySelector(".toast-desc").textContent = desc || "Pesan kamu sudah terkirim.";
+
+    toast.classList.add("is-show");
+
+    window.clearTimeout(toast._t);
+    toast._t = window.setTimeout(function () {
+      toast.classList.remove("is-show");
+    }, 3200);
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  const status = params.get("status");
+
+  if (status === "sukses") {
+    showToast("Form terkirim", "Terima kasih, pesan kamu sudah kami terima.");
+
+    params.delete("status");
+    const query = params.toString();
+    const newUrl = window.location.pathname + (query ? "?" + query : "") + window.location.hash;
+    window.history.replaceState({}, "", newUrl);
+  }
+
+  if (status === "gagal") {
+    showToast("Gagal mengirim", "Silakan coba lagi beberapa saat.");
+    params.delete("status");
+    const query = params.toString();
+    const newUrl = window.location.pathname + (query ? "?" + query : "") + window.location.hash;
+    window.history.replaceState({}, "", newUrl);
+  }
+})();
+
+(function () {
+  const form = document.getElementById("consultForm");
+  if (!form) return;
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn ? submitBtn.textContent : "";
+    if (submitBtn) {
+      submitBtn.classList.add("btn-loading");
+      submitBtn.innerHTML = '<span class="btn-spinner"></span>Mengirim...';
+      submitBtn.disabled = true;
+    }
+
+    const data = {};
+    new FormData(form).forEach((value, key) => {
+      data[key] = value;
+    });
+
+    try {
+      const res = await fetch("PASTE_URL_WEB_APP_KAMU_DI_SINI", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      const text = await res.text();
+      let out;
+      try { out = JSON.parse(text); } catch { out = null; }
+
+      if (out && out.ok) {
+        window.location.href = "https://energyfy.site/?status=sukses";
+        return;
+      }
+
+      alert("Pengiriman gagal. Silakan coba lagi.");
+      console.log(text);
+    } catch (err) {
+      alert("Pengiriman gagal. Periksa koneksi.");
+      console.error(err);
+    } finally {
+      if (submitBtn) {
+        submitBtn.classList.remove("btn-loading");
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    }
+  });
+})();
