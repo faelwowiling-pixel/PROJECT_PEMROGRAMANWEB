@@ -71,6 +71,7 @@
   class="consult-form"
   action="https://script.google.com/macros/s/AKfycbyV9mE8XwiW2iy1sdqBCAp1MUJe6ZH6Ae_NFaW_ZF9yUQzWd8iNoEyLms3ebLJw6FKckg/exec"
   method="POST"
+  target="konsultasi_iframe"
 >
   <input type="hidden" name="_subject" value="Form konsultasi baru dari website Energyfy">
   <input type="hidden" name="_template" value="table">
@@ -154,9 +155,33 @@
     <p>© Energyfy 2025</p>
   </footer>
 <script src="assets/js/main.js"></script>
+  <iframe
+  name="konsultasi_iframe"
+  id="konsultasi_iframe"
+  style="display:none; width:0; height:0; border:0;"
+></iframe>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".consult-form");
+  const iframe = document.getElementById("konsultasi_iframe");
+  if (!form || !iframe) return;
+
+  let sedangSubmit = false;
+
+  form.addEventListener("submit", function () {
+    sedangSubmit = true;
+  });
+
+  iframe.addEventListener("load", function () {
+    if (!sedangSubmit) return;
+    sedangSubmit = false;
+
+    window.location.href = "https://energyfy.site/?status=sukses";
+  });
+});
+</script>
+
 </body>
 
 </html>
-
-
-
