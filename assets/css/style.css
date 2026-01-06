@@ -1094,4 +1094,34 @@ body {
   margin: 0;          
 }
 
+.toast {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  background: rgba(15, 23, 42, 0.92);
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 12px;
+  max-width: 360px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 200ms ease, transform 200ms ease;
+  font-size: 14px;
+  line-height: 1.35;
+}
 
+.toast.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast .toast-title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.toast .toast-desc {
+  opacity: 0.95;
+}
