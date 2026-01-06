@@ -337,7 +337,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     try {
-      const res = await fetch("PASTE_URL_WEB_APP_KAMU_DI_SINI", {
+      const res = await fetch("https://script.google.com/macros/s/AKfycbyV9mE8XwiW2iy1sdqBCAp1MUJe6ZH6Ae_NFaW_ZF9yUQzWd8iNoEyLms3ebLJw6FKckg/exec", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
@@ -366,3 +366,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 })();
+
