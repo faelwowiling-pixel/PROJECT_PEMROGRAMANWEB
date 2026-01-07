@@ -104,14 +104,16 @@ document.addEventListener("DOMContentLoaded", function () {
         sourceLabel: "Analisa Potensi Energi Terbarukan di Kabupaten Kaimana."
       },
       {
-        name: "Biak Numfor",
-        coords: [-1.00, 136.08],
-        subtitle: "Lokasi kombinasi energi surya dan angin.",
-        text:
-          "Dokumen iklim Kabupaten Biak Numfor mencatat kecepatan angin rata rata sekitar 3,2 knot atau sekitar 1,6 meter per detik dengan paparan surya yang baik. Kondisi ini membuka peluang sistem hybrid surya angin untuk kebutuhan listrik pulau.",
-        sourceUrl: "https://papua.go.id/potensi-daerah/iklim-dan-topografi-kabupaten-biak-numfor",
-        sourceLabel: "Profil iklim dan topografi Kabupaten Biak Numfor."
-      }
+        {
+         name: "Biak Numfor",
+         coords: [-1.00, 136.08],
+         subtitle: "Potensi energi angin dan surya pada wilayah pulau pesisir Papua Utara.",
+         text:
+           "Biak Numfor merupakan wilayah pulau pesisir di Papua Utara dan termasuk kawasan Indonesia Timur. Kajian potensi energi surya dan angin berbasis klimatologi untuk Indonesia Timur dapat dijadikan rujukan ringkas awal untuk pengembangan sistem PLTS, turbin angin skala kecil, maupun sistem hybrid surya dan angin.",
+         sourceUrl: "https://iopscience.iop.org/article/10.1088/1755-1315/463/1/012030",
+         sourceLabel: "Solar and Wind Energy Potential Assessment in Eastern Indonesia Using Climatology Data (IOP EES)."
+       }
+
     ];
 
     const suryaLayer = L.layerGroup().addTo(map);
@@ -396,3 +398,4 @@ document.addEventListener("DOMContentLoaded", function () {
     loadClimateTable();
   }
 });
+
