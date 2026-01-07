@@ -315,3 +315,84 @@ document.addEventListener("DOMContentLoaded", function () {
     window.history.replaceState({}, "", newUrl);
   }
 })();
+
+(function () {
+  function setText(id, val) {
+    var el = document.getElementById(id);
+    if (el) el.textContent = val;
+  }
+
+  function setLink(id, url) {
+    var a = document.getElementById(id);
+    if (a) a.href = url;
+  }
+
+  function round2(x) {
+    return (Math.round(x * 100) / 100).toFixed(2);
+  }
+
+  async function fetchClimatology(lat, lon) {
+    var url =
+      "https://power.larc.nasa.gov/api/temporal/climatology/point" +
+      "?community=RE" +
+      "&format=JSON" +
+      "&latitude=" + encodeURIComponent(lat) +
+      "&longitude=" + encodeURIComponent(lon) +
+      "&parameters=" + encodeURIComponent("ALLSKY_SFC_SW_DWN,WS10M,T2M,PRECTOTCORR");
+
+    var res = await fetch(url, { method: "GET" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+
+    var json = await res.json();
+    var p = json && json.properties && json.properties.parameter ? json.properties.parameter : null;
+    if (!p) throw new Error("Format data tidak sesuai");
+
+    return { url: url, p: p };
+  }
+
+  async function fillRow(prefix, lat, lon) {
+    try {
+      var out = await fetchClimatology(lat, lon);
+
+      var solar = out.p.ALLSKY_SFC_SW_DWN && out.p.ALLSKY_SFC_SW_DWN.ANN;
+      var wind = out.p.WS10M && out.p.WS10M.ANN;
+      var temp = out.p.T2M && out.p.T2M.ANN;
+      var rain = out.p.PRECTOTCORR && out.p.PRECTOTCORR.ANN;
+
+      if (typeof solar === "number") setText(prefix + "-solar", round2(solar));
+      else setText(prefix + "-solar", "Tidak tersedia");
+
+      if (typeof wind === "number") setText(prefix + "-wind", round2(wind));
+      else setText(prefix + "-wind", "Tidak tersedia");
+
+      if (typeof temp === "number") setText(prefix + "-temp", round2(temp));
+      else setText(prefix + "-temp", "Tidak tersedia");
+
+      if (typeof rain === "number") setText(prefix + "-rain", round2(rain));
+      else setText(prefix + "-rain", "Tidak tersedia");
+
+      setLink(prefix + "-link", out.url);
+    } catch (e) {
+      setText(prefix + "-solar", "Gagal memuat");
+      setText(prefix + "-wind", "Gagal memuat");
+      setText(prefix + "-temp", "Gagal memuat");
+      setText(prefix + "-rain", "Gagal memuat");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var exists = document.getElementById("data-iklim");
+    if (!exists) return;
+
+    fillRow("clim-jay", -2.55, 140.78);   // Skouw, Jayapura
+    fillRow("clim-mer", -8.52, 140.31);   // Merauke
+    fillRow("clim-kai", -3.66, 133.74);   // Kaimana
+    fillRow("clim-biak", -1.00, 136.08);  // Biak
+  });
+})();
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("climate-table-body")) {
+    loadClimateTable();
+  }
+});
