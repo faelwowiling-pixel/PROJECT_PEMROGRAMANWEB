@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Energyfy | Peta, Edukasi, dan Konsultasi Energi Baru Terbarukan</title>
+  <title>Energyfy | Peta, Edukasi, dan Konsultasi Energi Terbarukan</title>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://energyfy.site/">
 
@@ -26,7 +26,7 @@
   <meta name="twitter:description" content="Peta interaktif dan materi edukasi energi terbarukan, fokus potensi surya dan angin di Papua.">
   <meta name="twitter:image" content="https://energyfy.site/assets/img/logo-energyfy-full.png">
 
-  <title>Energyfy - Peta dan Edukasi Energi Baru Terbarukan</title>
+  <title>Energyfy - Peta dan Edukasi Energi Terbarukan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" type="image/png" href="assets/img/logo-energyfy-icon.png">
@@ -44,7 +44,7 @@
   <!-- HEADER -->
   <header class="site-header-public">
     <div class="brand-area">
-      <img src="assets/img/logo-energyfy-full.png" alt="Energyfy" class="brand-logo-full" style="width: auto; height: 67px;">
+      <img src="assets/img/logo-energyfy-full.png" alt="Energyfy" class="brand-logo-full">
     </div>
     <nav class="nav-public">
       <a href="#beranda">Beranda</a>
@@ -75,7 +75,7 @@
           Peta, edukasi, dan konsultasi energi terbarukan
         </p>
         <div id="notif-sukses" style="display:none; margin-top:12px; padding:12px 14px; border-radius:12px; background:#dcfce7; color:#14532d; font-weight:600;">
-  Formulir berhasil terkirim. Terima kasih, pesan kamu sudah kami terim a.
+  Formulir berhasil terkirim. Terima kasih, pesan kamu sudah kami terima.
 </div>
 
         <div class="hero-actions">
@@ -402,6 +402,67 @@
       </div>
     </section>
 
+    <!-- TABEL DATA IKLIM (AUTO DARI NASA POWER) -->
+<section id="data-iklim" class="section-block reveal">
+  <h3>Data iklim ringkas per lokasi titik peta</h3>
+  <p class="section-intro">
+    Nilai berikut adalah klimatologi rata rata tahunan (ANN) periode 2001 sampai 2020.
+    Data diambil otomatis dari NASA POWER berdasarkan koordinat titik peta.
+  </p>
+
+  <div class="table-wrapper card-hover">
+    <table class="simple-table">
+      <thead>
+        <tr>
+          <th>Wilayah</th>
+          <th>Radiasi surya (kWh/m2/hari)</th>
+          <th>Angin 10 m (m/detik)</th>
+          <th>Suhu 2 m (C)</th>
+          <th>Curah hujan (mm/hari)</th>
+          <th>Sumber</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Skouw, Kota Jayapura</td>
+          <td><span id="clim-jay-solar">Memuat</span></td>
+          <td><span id="clim-jay-wind">Memuat</span></td>
+          <td><span id="clim-jay-temp">Memuat</span></td>
+          <td><span id="clim-jay-rain">Memuat</span></td>
+          <td><a id="clim-jay-link" href="#" target="_blank" rel="noopener">NASA POWER</a></td>
+        </tr>
+
+        <tr>
+          <td>Merauke (Rawa Biru dan sekitarnya)</td>
+          <td><span id="clim-mer-solar">Memuat</span></td>
+          <td><span id="clim-mer-wind">Memuat</span></td>
+          <td><span id="clim-mer-temp">Memuat</span></td>
+          <td><span id="clim-mer-rain">Memuat</span></td>
+          <td><a id="clim-mer-link" href="#" target="_blank" rel="noopener">NASA POWER</a></td>
+        </tr>
+
+        <tr>
+          <td>Kaimana</td>
+          <td><span id="clim-kai-solar">Memuat</span></td>
+          <td><span id="clim-kai-wind">Memuat</span></td>
+          <td><span id="clim-kai-temp">Memuat</span></td>
+          <td><span id="clim-kai-rain">Memuat</span></td>
+          <td><a id="clim-kai-link" href="#" target="_blank" rel="noopener">NASA POWER</a></td>
+        </tr>
+
+        <tr>
+          <td>Biak Numfor</td>
+          <td><span id="clim-biak-solar">Memuat</span></td>
+          <td><span id="clim-biak-wind">Memuat</span></td>
+          <td><span id="clim-biak-temp">Memuat</span></td>
+          <td><span id="clim-biak-rain">Memuat</span></td>
+          <td><a id="clim-biak-link" href="#" target="_blank" rel="noopener">NASA POWER</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
     <!-- DATA RINGKAS DI BAWAH TABEL -->
     <section class="section-block summary-section reveal">
       <h2>Data ringkas</h2>
@@ -529,10 +590,10 @@
             </a>
           </li>
           <li>
-            <strong>Data iklim dan kecepatan angin Kabupaten Biak Numfor</strong><br>
-            <a href="https://papua.go.id/potensi-daerah/iklim-dan-topografi-kabupaten-biak-numfor"
-               target="_blank" rel="noopener">
-              Pemerintah Provinsi Papua, Iklim dan Topografi Kabupaten Biak Numfor.
+            <strong>Kabupaten Biak Numfor Dalam Angka 2024 – Statistik Iklim dan Meteorologi</strong><br>
+            <a href="https://biakkab.bps.go.id/id/publication/2024/02/28/1faea79b115b770f1afed1c5/kabupaten-biak-numfor-dalam-angka-2024.html"
+            target="_blank" rel="noopener">
+            Badan Pusat Statistik Kabupaten Biak Numfor
             </a>
           </li>
           <li>
@@ -542,6 +603,12 @@
               Global Solar Atlas, World Bank Group.
             </a>
           </li>
+           <li>
+            <strong>Renewable Energy Management in European Union Member States</strong><br>
+            <a href="https://www.mdpi.com/1996-1073/16/16/5863" target="_blank" rel="noopener">
+            MDPI Energies (2023), Renewable Energy Management in European Union Member States
+          </a>      
+          </li>
           <li>
             <strong>Overview Pemanfaatan dan Perkembangan Sumber Daya Energi Surya Sebagai Energi Terbarukan di Indonesia</strong><br>
             <a href="https://ejournal2.undip.ac.id/index.php/jebt/article/viewFile/15714/9693"
@@ -549,6 +616,46 @@
               E-Journal UNDIP, Overview Pemanfaatan Energi Surya di Indonesia.
             </a>
           </li>
+           <li>
+            <strong>Renewable Energy</strong><br>
+            <a href="https://www.eia.gov/energyexplained/renewable-sources/" target="_blank" rel="noopener">
+             U.S. EIA, Renewable energy explained
+          </a>   
+          </li>    
+          <li>
+            <strong>Photovoltaic Cells and Electricity Generation</strong><br>
+            <a href="https://www.eia.gov/energyexplained/solar/photovoltaics-and-electricity.php" target="_blank" rel="noopener">
+            U.S. Energy Information Administration
+            </a>
+          </li>
+          <li>
+            <strong>Photovoltaic Solar Cells: A Review</strong><br>
+             <a href="https://www.mdpi.com/2571-5577/5/4/67"
+             target="_blank" rel="noopener">
+             MDPI, 2022
+             </a>
+          </li>
+          <li>
+            <strong>Wind Energy Technology Overview</strong><br> 
+            <a href="https://www.irena.org/Energy-Transition/Technology/Wind-energy"
+            target="_blank" rel="noopener">
+            International Renewable Energy Agency (IRENA)
+           </a>
+          </li> 
+          <li>
+            <strong>Wind Energy Conversions, Controls, and Applications: A Review</strong><br>
+            <a href="https://www.mdpi.com/2071-1050/15/5/3986"
+            target="_blank" rel="noopener">
+            MDPI Sustainability, 2023
+           </a>
+          </li>
+          <li>
+          <strong>Data klimatologi radiasi surya, angin, suhu, dan curah hujan (titik peta)</strong><br>
+          <a href="https://power.larc.nasa.gov/docs/services/api/temporal/climatology/" target="_blank" rel="noopener">
+         NASA POWER, Climatology API (periode klimatologi 2001 sampai 2020).
+         </a>
+        </li>
+                            
         </ul>
       </div>
     </section>
@@ -636,11 +743,20 @@
 
   </main>
 
-  <footer class="site-footer">
-    <p>© Energyfy 2025 <br>
-      <a href="https://itpln.ac.id/"> Back to ITPLN </a>
-    </p>
-  </footer>
+ <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/img/logo-energyfy-icon.png" alt="Energyfy" class="footer-logo">
+      <span class="footer-text">© Energyfy 2025</span>
+    </div>
+
+    <a class="footer-brand footer-link" href="https://itpln.org/" target="_blank" rel="noopener">
+      <img src="assets/img/itpln-logo.png" alt="Institut Teknologi PLN" class="footer-logo">
+      <span class="footer-text">Institut Teknologi PLN</span>
+    </a>
+  </div>
+</footer>
+
 
   <!-- Leaflet JS -->
   <script
@@ -653,6 +769,3 @@
 </body>
 
 </html>
-
-
-
