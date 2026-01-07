@@ -410,8 +410,8 @@
     Data diambil otomatis dari NASA POWER berdasarkan koordinat titik peta.
   </p>
 
-  <div class="table-wrapper card-hover">
-    <table class="simple-table">
+  <div class="table-wrapper card-hover table responsive">
+    <table class="simple-table table-climate">
       <thead>
         <tr>
           <th>Wilayah</th>
@@ -423,41 +423,81 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Skouw, Kota Jayapura</td>
-          <td><span id="clim-jay-solar">Memuat</span></td>
-          <td><span id="clim-jay-wind">Memuat</span></td>
-          <td><span id="clim-jay-temp">Memuat</span></td>
-          <td><span id="clim-jay-rain">Memuat</span></td>
-          <td><a id="clim-jay-link" href="#" target="_blank" rel="noopener">NASA POWER</a></td>
-        </tr>
+    <tr>
+      <td data-label="Wilayah">Skouw, Kota Jayapura</td>
+      <td data-label="Radiasi surya (kWh/m2/hari)">
+        <span id="clim-jay-solar">Memuat</span>
+      </td>
+      <td data-label="Angin 10 m (m/detik)">
+        <span id="clim-jay-wind">Memuat</span>
+      </td>
+      <td data-label="Suhu 2 m (C)">
+        <span id="clim-jay-temp">Memuat</span>
+      </td>
+      <td data-label="Curah hujan (mm/hari)">
+        <span id="clim-jay-rain">Memuat</span>
+      </td>
+      <td data-label="Sumber">
+        <a id="clim-jay-link" href="#" target="_blank" rel="noopener">NASA POWER</a>
+      </td>
+    </tr>
 
-        <tr>
-          <td>Merauke (Rawa Biru dan sekitarnya)</td>
-          <td><span id="clim-mer-solar">Memuat</span></td>
-          <td><span id="clim-mer-wind">Memuat</span></td>
-          <td><span id="clim-mer-temp">Memuat</span></td>
-          <td><span id="clim-mer-rain">Memuat</span></td>
-          <td><a id="clim-mer-link" href="#" target="_blank" rel="noopener">NASA POWER</a></td>
-        </tr>
+    <tr>
+      <td data-label="Wilayah">Merauke (Rawa Biru dan sekitarnya)</td>
+      <td data-label="Radiasi surya (kWh/m2/hari)">
+        <span id="clim-mer-solar">Memuat</span>
+      </td>
+      <td data-label="Angin 10 m (m/detik)">
+        <span id="clim-mer-wind">Memuat</span>
+      </td>
+      <td data-label="Suhu 2 m (C)">
+        <span id="clim-mer-temp">Memuat</span>
+      </td>
+      <td data-label="Curah hujan (mm/hari)">
+        <span id="clim-mer-rain">Memuat</span>
+      </td>
+      <td data-label="Sumber">
+        <a id="clim-mer-link" href="#" target="_blank" rel="noopener">NASA POWER</a>
+      </td>
+    </tr>
 
-        <tr>
-          <td>Kaimana</td>
-          <td><span id="clim-kai-solar">Memuat</span></td>
-          <td><span id="clim-kai-wind">Memuat</span></td>
-          <td><span id="clim-kai-temp">Memuat</span></td>
-          <td><span id="clim-kai-rain">Memuat</span></td>
-          <td><a id="clim-kai-link" href="#" target="_blank" rel="noopener">NASA POWER</a></td>
-        </tr>
+    <tr>
+      <td data-label="Wilayah">Kaimana</td>
+      <td data-label="Radiasi surya (kWh/m2/hari)">
+        <span id="clim-kai-solar">Memuat</span>
+      </td>
+      <td data-label="Angin 10 m (m/detik)">
+        <span id="clim-kai-wind">Memuat</span>
+      </td>
+      <td data-label="Suhu 2 m (C)">
+        <span id="clim-kai-temp">Memuat</span>
+      </td>
+      <td data-label="Curah hujan (mm/hari)">
+        <span id="clim-kai-rain">Memuat</span>
+      </td>
+      <td data-label="Sumber">
+        <a id="clim-kai-link" href="#" target="_blank" rel="noopener">NASA POWER</a>
+      </td>
+    </tr>
 
-        <tr>
-          <td>Biak Numfor</td>
-          <td><span id="clim-biak-solar">Memuat</span></td>
-          <td><span id="clim-biak-wind">Memuat</span></td>
-          <td><span id="clim-biak-temp">Memuat</span></td>
-          <td><span id="clim-biak-rain">Memuat</span></td>
-          <td><a id="clim-biak-link" href="#" target="_blank" rel="noopener">NASA POWER</a></td>
-        </tr>
+    <tr>
+      <td data-label="Wilayah">Biak Numfor</td>
+      <td data-label="Radiasi surya (kWh/m2/hari)">
+        <span id="clim-biak-solar">Memuat</span>
+      </td>
+      <td data-label="Angin 10 m (m/detik)">
+        <span id="clim-biak-wind">Memuat</span>
+      </td>
+      <td data-label="Suhu 2 m (C)">
+        <span id="clim-biak-temp">Memuat</span>
+      </td>
+      <td data-label="Curah hujan (mm/hari)">
+        <span id="clim-biak-rain">Memuat</span>
+      </td>
+      <td data-label="Sumber">
+        <a id="clim-biak-link" href="#" target="_blank" rel="noopener">NASA POWER</a>
+      </td>
+    </tr>
       </tbody>
     </table>
   </div>
@@ -794,5 +834,6 @@
 </body>
 
 </html>
+
 
 
