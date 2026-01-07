@@ -103,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
         sourceUrl: "https://repository.unhas.ac.id/id/eprint/5331/",
         sourceLabel: "Analisa Potensi Energi Terbarukan di Kabupaten Kaimana."
       },
-      {
         {
          name: "Biak Numfor",
          coords: [-1.00, 136.08],
@@ -398,4 +397,5 @@ document.addEventListener("DOMContentLoaded", function () {
     loadClimateTable();
   }
 });
+
 
